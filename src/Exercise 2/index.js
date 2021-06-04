@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-const WithFormWrapper = WrapComponent => {
+const withFormWrapper = WrapComponent => {
   return function (props) {
     return (
       <div className='login-page'>
@@ -15,4 +15,4 @@ const WithFormWrapper = WrapComponent => {
   };
 };
 
-export default WithFormWrapper;
+export default withFormWrapper;

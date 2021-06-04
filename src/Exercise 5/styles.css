@@ -18,8 +18,8 @@
 }
 
 .time {
-  font-size: 8rem;
-  margin-bottom: 1rem;
+  font-size: 128px;
+  margin-bottom: 12px;
   color: white;
 }
 
@@ -60,11 +60,4 @@
   width: 300px;
   border: none;
   border-bottom: 1px solid #ccc;
-}
-
-.error {
-  color: red;
-  font-size: 25px;
-  text-align: center;
-  padding: 10px;
 }

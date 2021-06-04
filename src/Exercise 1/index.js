@@ -1,17 +1,17 @@
 import React from 'react';
-import ControlledComponent from './ControlledComponent';
 import UncontrolledComponent from './UncontrolledComponent';
+import ControlledComponent from './ControlledComponent';
 import './styles.css';
 
 export const Exercise1 = () => {
   return (
     <div className='wrapper'>
       <div>
-        <h6 className='TitleComponent'>Controlled Component</h6>
+        <h2 className='title-component'>Controlled Component</h2>
         <ControlledComponent />
       </div>
       <div>
-        <h6 className='TitleComponent'>Uncontrolled Component</h6>
+        <h2 className='title-component'>Uncontrolled Component</h2>
         <UncontrolledComponent />
       </div>
     </div>

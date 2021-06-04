@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
-import { Sidebar } from '../components/toggleSidebar';
+import { Route, Switch } from 'react-router-dom';
+import { LOGIN_LINK, TIMER_LINK } from '../components/Links';
+import Loader from '../components/Loader';
+import { Sidebar } from '../components/Sidebar';
 import { Exercise1 } from '../Exercise 1';
 import './styles.css';
 
@@ -10,12 +12,8 @@ export const App = () => {
   return (
     <div className='main-wrapper'>
       <Sidebar>
-        <p>
-          <Link to='/'>Login form</Link>
-        </p>
-        <p>
-          <Link to='/timer'>Timer</Link>
-        </p>
+        {LOGIN_LINK}
+        {TIMER_LINK}
       </Sidebar>
       <Switch>
         <Route exact path='/' component={Exercise1} />
@@ -23,7 +21,7 @@ export const App = () => {
           path='/timer'
           render={() => {
             return (
-              <Suspense fallback={<h3 style={{ margin: '0 auto' }}>Loading...</h3>}>
+              <Suspense fallback={<Loader />}>
                 <Timer />
               </Suspense>
             );
