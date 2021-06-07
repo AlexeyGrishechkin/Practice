@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SECONDS_IN_HOURS } from '../components/Constants';
+import { SECONDS_IN_HOURS } from '../constants/constants';
 import './styles.css';
 
 const parseTime = seconds => new Date(seconds * 1000).toISOString().substr(14, 5);

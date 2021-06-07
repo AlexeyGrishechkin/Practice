@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { MIN_NAME_LENGTH, MIN_PASSWORD_LENGTH } from '../../components/Constants';
+import { MIN_NAME_LENGTH, MIN_PASSWORD_LENGTH } from '../../constants/constants';
 import withFormWrapper from '../../Exercise 2';
 
 const UncontrolledComponent = () => {
