@@ -1,6 +1,12 @@
-export const MIN_NAME_LENGTH = 4;
+export const INPUT_NAME_PARAMS = {
+  name: 'name',
+  length: 4,
+};
 
-export const MIN_PASSWORD_LENGTH = 6;
+export const INPUT_PASSWORD_PARAMS = {
+  name: 'password',
+  length: 6,
+};
 
 export const SIDEBAR_WIDTH = 185;
 

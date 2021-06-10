@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { MIN_NAME_LENGTH, MIN_PASSWORD_LENGTH } from '../../constants/constants';
+import { INPUT_NAME_PARAMS, INPUT_PASSWORD_PARAMS } from '../../constants/constants';
 import { Input } from '../../Exercise 3';
 import withFormWrapper from '../../Exercise 2';
+import { checkInputLength } from '../../helpers/checkInputLength';
 
 const ControlledComponent = () => {
   const [name, setName] = useState('');
@@ -15,13 +16,9 @@ const ControlledComponent = () => {
   }, [name, password]);
 
   const checkErrors = () => {
-    let nameMessage = name.length < MIN_NAME_LENGTH && 'Field "username" must be more 4 characters';
+    let nameMessage = checkInputLength(name, INPUT_NAME_PARAMS);
 
-    let passwordMessage =
-      password.length < MIN_PASSWORD_LENGTH && 'Field "passsword" must be more 6 characters';
-
-    if (name.length === 0) nameMessage = 'Field "name" must not be empty';
-    if (password.length === 0) passwordMessage = 'Field "password" must not be empty';
+    let passwordMessage = checkInputLength(password, INPUT_PASSWORD_PARAMS);
 
     if (!nameMessage && !passwordMessage) {
       setShowFieldError(false);

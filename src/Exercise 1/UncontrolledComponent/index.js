@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { MIN_NAME_LENGTH, MIN_PASSWORD_LENGTH } from '../../constants/constants';
+import { INPUT_NAME_PARAMS, INPUT_PASSWORD_PARAMS } from '../../constants/constants';
 import withFormWrapper from '../../Exercise 2';
 
 const UncontrolledComponent = () => {
@@ -17,8 +17,8 @@ const UncontrolledComponent = () => {
     const nameValue = inputName.current.value;
     const passwordValue = inputPass.current.value;
 
-    const errorName = checkLength(nameValue, MIN_NAME_LENGTH);
-    const errorPassword = checkLength(passwordValue, MIN_PASSWORD_LENGTH);
+    const errorName = checkLength(nameValue, INPUT_NAME_PARAMS.length);
+    const errorPassword = checkLength(passwordValue, INPUT_PASSWORD_PARAMS.length);
 
     setErrorName(errorName);
     setErrorPassword(errorPassword);
