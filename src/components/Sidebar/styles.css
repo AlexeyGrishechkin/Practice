@@ -1,0 +1,31 @@
+.toggle-menu {
+  height: 50px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 32px;
+  width: 10px;
+  outline: none;
+  z-index: 1;
+  background-color: rgba(64, 194, 133, 0.693);
+  border-color: rgba(64, 194, 133, 0.693);
+  border-left: 0;
+  transform: translate(185px, 20vh);
+}
+
+.side-bar {
+  width: 185px;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid;
+  border-radius: 0;
+  border-color: rgba(64, 194, 133, 0.693);
+  background-color: rgb(255, 255, 255);
+  transition: 0.8s ease;
+  position: absolute;
+}
+
+.content {
+  padding: 15px;
+  text-decoration: none;
+}
